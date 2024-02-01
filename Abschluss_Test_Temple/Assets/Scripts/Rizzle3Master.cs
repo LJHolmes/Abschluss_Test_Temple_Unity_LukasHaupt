@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rizzle3Master : MonoBehaviour
 {
@@ -60,5 +61,10 @@ public class Rizzle3Master : MonoBehaviour
             soundManager.PlayWinSound();
             winScreenPanel.SetActive(true);
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 }
