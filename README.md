@@ -7,7 +7,10 @@ https://play.unity.com/p/webgl-builds-389267/edit
 
 # Video
 Game process
-https://github.com/LJHolmes/Abschluss_Test_Temple_Unity_LukasHaupt/assets/106515155/02ebeae7-bfd5-4879-949a-3b8391dbbfa5
+
+https://github.com/LJHolmes/Abschluss_Test_Temple_Unity_LukasHaupt/assets/106515155/9d3369f9-c829-47e0-8f6d-d453d186a7e2
+
+
 
 
 # Images
