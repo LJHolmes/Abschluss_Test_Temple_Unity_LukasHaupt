@@ -4,6 +4,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource CorrectSound;
     public AudioSource WinSound;
+    public AudioSource WrongSound;
 
     public void PlayCorectSound()
     {
@@ -13,5 +14,10 @@ public class SoundManager : MonoBehaviour
     public void PlayWinSound()
     {
         WinSound.Play();
+    }
+
+    public void PlayWrongSound()
+    {
+        WrongSound.Play();
     }
 }

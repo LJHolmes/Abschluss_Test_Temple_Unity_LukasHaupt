@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Rizzle1.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Rizzle2.unity
+    guid: 12e50d3b44f3ca5439233846d4af614f
+  - enabled: 1
+    path: Assets/Scenes/Rizzle3.unity
+    guid: 3b7f0103603a4f44bbd0f29228e00c38
   m_configObjects: {}

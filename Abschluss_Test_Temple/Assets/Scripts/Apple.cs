@@ -5,13 +5,15 @@ public class Apple : MonoBehaviour
     public bool IsInPlace = false;
 
     private SoundManager soundManager;
-    private GameMaster gameMaster;
-    private Rigidbody appleRB;
+    private Rizzle1Master gameMaster;
+    private Rigidbody rb;
 
     [SerializeField] private bool appleTR;
     [SerializeField] private bool appleBL;
     [SerializeField] private bool appleTL;
     [SerializeField] private bool appleBR;
+
+    [SerializeField] private bool appleFinished = false;
 
     [SerializeField] private GameObject SpotTR;
     [SerializeField] private GameObject SpotBL;
@@ -24,14 +26,19 @@ public class Apple : MonoBehaviour
 
     void Start()
     {
-        gameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
+        gameMaster = GameObject.Find("GameMaster").GetComponent<Rizzle1Master>();
         soundManager = GameObject.Find("Main Camera").GetComponent<SoundManager>();
 
-        appleRB = gameObject.GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
+        if (appleFinished)
+        {
+            return;
+        }
+
         if (appleTR)
         {
             distance = Vector3.Distance(transform.position, SpotTR.transform.position);
@@ -79,10 +86,11 @@ public class Apple : MonoBehaviour
         soundManager.PlayCorectSound();
 
         IsInPlace = true;
+        appleFinished = true;
 
         gameMaster.AppleScore++;
 
-        appleRB.useGravity = false;
-        appleRB.isKinematic = true;
+        rb.useGravity = false;
+        rb.isKinematic = true;
     }
 }

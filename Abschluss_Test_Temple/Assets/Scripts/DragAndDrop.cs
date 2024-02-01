@@ -4,14 +4,16 @@ public class DragAndDrop : MonoBehaviour
 {
     private Vector3 mousePosition;
 
-    private Rigidbody appleRB;
+    private Rigidbody rb;
 
     private Apple appleScript;
 
     private void Start()
     {
-        appleRB = gameObject.GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<Rigidbody>();
         appleScript = gameObject.GetComponent<Apple>();
+
+        rb.isKinematic = true;
     }
 
     private Vector3 GetMousePos()
@@ -28,6 +30,8 @@ public class DragAndDrop : MonoBehaviour
                 return;
             }
         }
+
+        rb.isKinematic = false;
 
         mousePosition = Input.mousePosition - GetMousePos();
     }
@@ -59,7 +63,7 @@ public class DragAndDrop : MonoBehaviour
                 return;
             }
 
-            //appleRB.useGravity = true;
+            rb.isKinematic = true;
 
         }
     }
