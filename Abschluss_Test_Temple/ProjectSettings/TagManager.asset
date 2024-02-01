@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LightPillar
   - Statue
+  - HitPoint
   layers:
   - Default
   - TransparentFX

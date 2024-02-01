@@ -6,7 +6,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource WinSound;
     public AudioSource WrongSound;
 
-    public void PlayCorectSound()
+    public void PlayCorrectSound()
     {
         CorrectSound.Play();
     }

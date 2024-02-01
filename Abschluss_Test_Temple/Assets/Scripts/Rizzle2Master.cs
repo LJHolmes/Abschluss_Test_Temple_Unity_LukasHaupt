@@ -47,7 +47,10 @@ public class Rizzle2Master : MonoBehaviour
             {
                 soundManager.PlayWrongSound();
                 Invoke("TurnAllLightsOff", 0.5f);
+                return;
             }
+
+            soundManager.PlayCorrectSound();
         }
         if (pillar.GetComponent<LightPillar>().PillarBlue)
         {
@@ -57,7 +60,10 @@ public class Rizzle2Master : MonoBehaviour
             {
                 soundManager.PlayWrongSound();
                 Invoke("TurnAllLightsOff", 0.5f);
+                return;
             }
+
+            soundManager.PlayCorrectSound();
         }
         if (pillar.GetComponent<LightPillar>().PillarGreen)
         {

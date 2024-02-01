@@ -83,7 +83,7 @@ public class Apple : MonoBehaviour
 
     private void AppleInPlace()
     {
-        soundManager.PlayCorectSound();
+        soundManager.PlayCorrectSound();
 
         IsInPlace = true;
         appleFinished = true;

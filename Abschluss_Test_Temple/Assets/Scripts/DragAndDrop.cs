@@ -11,8 +11,9 @@ public class DragAndDrop : MonoBehaviour
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
-        appleScript = gameObject.GetComponent<Apple>();
 
+        appleScript = gameObject.GetComponent<Apple>();
+ 
         rb.isKinematic = true;
     }
 
@@ -64,7 +65,6 @@ public class DragAndDrop : MonoBehaviour
             }
 
             rb.isKinematic = true;
-
         }
     }
 }
